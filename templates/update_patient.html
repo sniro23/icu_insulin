@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Patient Data</title>
+</head>
+<body>
+    <h2>Update Patient: {{ patient.patient_id }}</h2>
+    <form method="POST">
+        <label>Age:</label>
+        <input type="number" name="age" value="{{ patient.age }}" required disabled><br>
+
+        <label>Weight (kg):</label>
+        <input type="number" name="weight" step="0.1" value="{{ patient.weight }}" required disabled><br>
+
+        <label>Diabetes Status:</label>
+        <input type="text" value="{{ patient.diabetes_status }}" disabled><br>
+
+        <label>Treatment Type:</label>
+        <input type="text" value="{{ patient.treatment_type }}" disabled><br>
+
+        <label>Diet Status:</label>
+        <input type="text" value="{{ patient.diet_status }}" disabled><br>
+
+        <label>Indication for Insulin:</label>
+        <input type="text" value="{{ patient.indication }}" disabled><br>
+
+        <label>Last Blood Glucose:</label>
+        <input type="number" name="glucose_1" step="0.1" value="{{ patient.glucose_1 }}" required><br>
+
+        <label>Second Last Blood Glucose (Optional):</label>
+        <input type="number" name="glucose_2" step="0.1" value="{{ patient.glucose_2 }}"><br>
+
+        <h3>Insulin Recommendation</h3>
+        <p>Suggested Infusion Rate: <strong>{{ insulin_rate }}</strong> units/hr</p>
+
+        <h3>Fluid Recommendation</h3>
+        <p>Recommended Fluids: <strong>{{ fluid_rate }}</strong></p>
+
+        <button type="submit">Update Patient</button>
+    </form>
+</body>
+</html>

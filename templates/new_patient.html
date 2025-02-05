@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Patient Entry</title>
+</head>
+<body>
+    <h2>New Patient Entry</h2>
+    <form method="POST">
+        <label>Patient ID:</label>
+        <input type="text" name="patient_id" required><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" required><br>
+
+        <label>Weight (kg):</label>
+        <input type="number" name="weight" step="0.1" required><br>
+
+        <label>Diabetes Status:</label>
+        <select name="diabetes_status">
+            {% for status in diabetes_status_options %}
+                <option value="{{ status }}">{{ status }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label>Treatment Type:</label>
+        <select name="treatment_type">
+            {% for type in treatment_type_options %}
+                <option value="{{ type }}">{{ type }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label>Diet Status:</label>
+        <select name="diet_status">
+            {% for diet in diet_status_options %}
+                <option value="{{ diet }}">{{ diet }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label>Indication for Insulin:</label>
+        <select name="indication">
+            {% for indication in indication_options %}
+                <option value="{{ indication }}">{{ indication }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label>Last Blood Glucose:</label>
+        <input type="number" name="glucose_1" step="0.1" required><br>
+
+        <label>Second Last Blood Glucose (Optional):</label>
+        <input type="number" name="glucose_2" step="0.1"><br>
+
+        <button type="submit">Save Patient</button>
+    </form>
+</body>
+</html>
