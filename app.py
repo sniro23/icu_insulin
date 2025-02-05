@@ -76,14 +76,7 @@ def update_patient(patient_id):
                            diabetes_status_options=["Type 1 DM", "Type 2 DM", "No Diabetes"],
                            treatment_type_options=["Oral drugs", "Basal-Bolus", "Pre-Mix", "Basal only"],
                            diet_status_options=["Nil by Mouth", "Enteral Feeding", "Normal Diet"],
-                           indication_options=["DKA", "HHS", "Sepsis", "ACS", "CVA", "Other Critical Illness"],
-                           js_script="<script>
-                           function toggleTreatmentType() {
-                               var diabetesStatus = document.getElementById('diabetes_status').value;
-                               var treatmentTypeField = document.getElementById('treatment_type');
-                               treatmentTypeField.disabled = (diabetesStatus === 'No Diabetes');
-                           }
-                           </script>")
+                           indication_options=["DKA", "HHS", "Sepsis", "ACS", "CVA", "Other Critical Illness"])
 
 @app.route('/new_patient', methods=['GET', 'POST'])
 def new_patient():
@@ -93,14 +86,7 @@ def new_patient():
                            diabetes_status_options=["Type 1 DM", "Type 2 DM", "No Diabetes"],
                            treatment_type_options=["Oral drugs", "Basal-Bolus", "Pre-Mix", "Basal only"],
                            diet_status_options=["Nil by Mouth", "Enteral Feeding", "Normal Diet"],
-                           indication_options=["DKA", "HHS", "Sepsis", "ACS", "CVA", "Other Critical Illness"],
-                           js_script="<script>
-                           function toggleTreatmentType() {
-                               var diabetesStatus = document.getElementById('diabetes_status').value;
-                               var treatmentTypeField = document.getElementById('treatment_type');
-                               treatmentTypeField.disabled = (diabetesStatus === 'No Diabetes');
-                           }
-                           </script>")
+                           indication_options=["DKA", "HHS", "Sepsis", "ACS", "CVA", "Other Critical Illness"])
 
 if __name__ == '__main__':
     with app.app_context():
