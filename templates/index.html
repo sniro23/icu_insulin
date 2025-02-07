@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICU Insulin Tool</title>
+    <title>ICU Insulin Management</title>
 </head>
 <body>
-    <h2>Search for Patient</h2>
-    <form method="POST">
-        <label for="patient_id">Patient ID:</label>
-        <input type="text" name="patient_id" required>
-        <button type="submit">Search</button>
-    </form>
+    <h2>ICU Insulin Management</h2>
+    <button onclick="window.location.href='/new_patient'">New Patient</button>
+    <button onclick="window.location.href='/search_patient'">Existing Patient</button>
 </body>
 </html>

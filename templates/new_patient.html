@@ -6,7 +6,7 @@
     <title>New Patient Entry</title>
 </head>
 <body>
-    <h2>New Patient Entry</h2>
+    <h2>New Patient Registration</h2>
     <form method="POST">
         <label>Patient ID:</label>
         <input type="text" name="patient_id" required><br>
@@ -19,30 +19,34 @@
 
         <label>Diabetes Status:</label>
         <select name="diabetes_status">
-            {% for status in diabetes_status_options %}
-                <option value="{{ status }}">{{ status }}</option>
-            {% endfor %}
+            <option value="Type 1 DM">Type 1 DM</option>
+            <option value="Type 2 DM">Type 2 DM</option>
+            <option value="No Diabetes">No Diabetes</option>
         </select><br>
 
         <label>Treatment Type:</label>
         <select name="treatment_type">
-            {% for type in treatment_type_options %}
-                <option value="{{ type }}">{{ type }}</option>
-            {% endfor %}
+            <option value="Oral drugs">Oral drugs</option>
+            <option value="Basal-Bolus">Basal-Bolus</option>
+            <option value="Pre-Mix">Pre-Mix</option>
+            <option value="Basal only">Basal only</option>
         </select><br>
 
         <label>Diet Status:</label>
         <select name="diet_status">
-            {% for diet in diet_status_options %}
-                <option value="{{ diet }}">{{ diet }}</option>
-            {% endfor %}
+            <option value="Nil by Mouth">Nil by Mouth</option>
+            <option value="Enteral Feeding">Enteral Feeding</option>
+            <option value="Normal Diet">Normal Diet</option>
         </select><br>
 
         <label>Indication for Insulin:</label>
         <select name="indication">
-            {% for indication in indication_options %}
-                <option value="{{ indication }}">{{ indication }}</option>
-            {% endfor %}
+            <option value="DKA">DKA</option>
+            <option value="HHS">HHS</option>
+            <option value="Sepsis">Sepsis</option>
+            <option value="ACS">ACS</option>
+            <option value="CVA">CVA</option>
+            <option value="Other Critical Illness">Other Critical Illness</option>
         </select><br>
 
         <label>Last Blood Glucose:</label>
@@ -51,7 +55,7 @@
         <label>Second Last Blood Glucose (Optional):</label>
         <input type="number" name="glucose_2" step="0.1"><br>
 
-        <button type="submit">Save Patient</button>
+        <button type="submit">Register Patient</button>
     </form>
 </body>
 </html>
